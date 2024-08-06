@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rage Against the Machine</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <ul id="nav">
+        <li class="logo">
+            <div class="logo"><a href="index.html">RAM</a></div>
+        </li>
+        <li>
+            <nav class="nav-Bar">
+                <ul>
+                    <li>
+                        <a class="nav-button" id="home" href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a class="nav-button" id="live-shows">LIVE SHOWS</a>
+                    </li>
+                    <li>
+                        <a class="nav-button" id="music">MUSIC</a>
+                    </li>
+                    <li>
+                        <a class="nav-button" id="store">STORE</a>
+                    </li>
+                    <li>
+                        <a class="nav-button" id="newsletter">JOIN THE NEWSLETTER</a>
+                    </li>
+                </ul>
+            </nav>
+        </li>
+    </ul>
+    <main>
+        <i class="fa-solid fa-bag-shopping" style="
+        font-size: 50px;
+        position: fixed;
+    top: 112px;
+    right: 12px;
+    z-index: 1100;
+    color: rgb(213, 160, 33);"></i>
+        <div class="vid-container">
+            <video autoplay muted loop id="background">
+                <source src="MCR.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="overlay"></div>
+        <div class="hero">
+            <h3>Rage Against the Machine</h3>
+            <p class="hero-text">'Caraphernalia' now out!</p>
+        </div>
+        <div id='svg-background'>
+            <svg width="90%" height="4000" style="padding: 0; margin: 0;">
+                <defs>
+                    <filter id="filter" height="1.4" width="1.4">
+                        <feTurbulence baseFrequency="0.12" numOctaves="2" type="fractalNoise" result="result1" />
+                        <feDisplacementMap in2="result1" scale="99" result="result2" xChannelSelector="R"
+                            in="SourceGraphic" />
+                        <feComposite in2="result2" in="SourceGraphic" operator="atop" result="fbSourceGraphic" />
+                    </filter>
+                </defs>
+                <rect fill="rgb(107, 101, 75)" filter="url(#filter)" width="100%" height="4000" x="0" y="0" />
+                <foreignObject width="100%" height="4000">
+                    <div id="content">
+                        <div class="g-overlay"></div>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/FZVYOriINwc?si=ZcOe_bnUHj70jHqU"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <p class="titles">Listen now</p>
+                        <ul id="listening">
+                            <li>
+                                <div class="icon-button"><img src="spotify.png"></div>
+                            </li>
+                            <li>
+                                <div class="icon-button"><img src="apple-music.png"></div>
+                            </li>
+                            <li>
+                                <div class="icon-button"><img src="youtube.png"></div>
+                            </li>
+                            <li>
+                                <div class="icon-button"><img src="soundcloud.png" style="color: black;"></div>
+                            </li>
+                        </ul>
+                        <div id="performances" style="height: 20px; width: auto;"></div>
+                        <div id="live-performances">
+                            <p class="titles">Upcoming Live Performances</p>
+                            <br />
+                            <br />
+                            <div id="current-poster"><img src="https://nyxsolutions.co.ke/rage.machine/event-images/poster1.jpg" id="curr-poster"></div>
+                            <br />
+                            <button id="buy-tickets">Buy Tickets</button>
+                            <br />
+                            <div id="poster-scroll">
+                                <script src="fetch-event.js"></script>
+                            </div>
+                            <br />
+                            <ul id="merch">
+                                <li>
+                                    <div class="merch-option">
+                                        <script src="fetch-products.js"></script>
+                                        <script src="fetch-apparel.js"></script>
+                                        <p id="apparel-merch">Apparel</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="merch-option">
+                                        <script src="fetch-music.js"></script>
+                                        <p id="music-merch">Music</p>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="merch-option">
+                                        <script src="fetch-accessories.js"></script>
+                                        <p id="accessory-merch">Accessories</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <br />
+                            <div id="flex-merch">
+                                <script src="fetch-apparel.js"></script>
+                            </div>
+                            <br />
+                        </div>
+                        <br />
+                        <div id="discography">
+                            <p class="titles">Discography</p>
+                            <br />
+                            <br />
+                            <br />
+                            <div id="albums">
+                                <iframe style="border-radius:12px; margin: 20px;"
+                                    src="https://open.spotify.com/embed/album/6esicDmiVKUGrff14ahfrK?utm_source=generator&theme=0"
+                                    width="25%" height="352" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                                <iframe style="border-radius:12px; margin: 20px;"
+                                    src="https://open.spotify.com/embed/album/2wPnKggTK3QhYAKL7Q0vvr?utm_source=generator"
+                                    width="25%" height="352" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                                <iframe style="border-radius:12px; margin: 20px;"
+                                    src="https://open.spotify.com/embed/album/3DuiGV3J09SUhvp8gqNx8h?utm_source=generator"
+                                    width="25%" height="352" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                                <iframe style="border-radius:12px; margin: 20px;"
+                                    src="https://open.spotify.com/embed/album/3VSl97ITIbXoFQvx2DQ605?utm_source=generator"
+                                    width="25%" height="352" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                                <iframe style="border-radius:12px; margin: 20px;"
+                                    src="https://open.spotify.com/embed/album/0FZK97MXMm5mUQ8mtudjuK?utm_source=generator"
+                                    width="25%" height="352" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                                <iframe style="border-radius:12px; margin: 20px;"
+                                    src="https://open.spotify.com/embed/album/78ZshSpqcIXyrYBJGgiPK0?utm_source=generator"
+                                    width="25%" height="352" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+
+                            </div>
+                        </div>
+
+                        <div id="newsletter-form">
+                            <p class="titles">Join Our Newsletter</p>
+                            <br />
+                            <p class="normal-text">Get updated with our latest news and performances!</p>
+                            <br />
+                            <form id="form" action='https://nyxsolutions.co.ke/Tiffany/rage-machine/newsletter-post.php'
+                                method="post">
+                                <label for="fname">Name: </label>
+                                <input type="text" id="fname" name="name"><br />
+                                <br />
+                                <br />
+                                <label for="email">Email Address: </label>
+                                <input type="email" id="email" name="email_address"><br />
+                                <br />
+                                <br />
+                                <input id="submit-button"
+                                    action='https://nyxsolutions.co.ke/Tiffany/rage-machine/newsletter-post.php'
+                                    type="submit" value="Subscribe" formmethod="post">
+                            </form>
+                            <p id="message"></p>
+
+                        </div>
+                        <!--<div style="z-index: 1500;">
+                        <p class="titles">Connect With Us</p>
+                        <div class="social-media">
+                        <a href="https://www.youtube.com/@mychemicalromance" class="soc-med">
+                        <img src="youtube.png">
+                        </a>
+                        <a href="https://www.youtube.com/@mychemicalromance" class="soc-med">
+                            <img src="youtube.png">
+                        </a>
+                        <a href="https://www.youtube.com/@mychemicalromance" class="soc-med">
+                            <img src="youtube.png">
+                        </a>
+                        <a href="https://www.youtube.com/@mychemicalromance" class="soc-med">
+                            <img src="youtube.png">
+                        </a></div>
+                        </div>-->
+
+
+                        
+
+                </foreignObject>
+            </svg>
+        </div>
+
+    </main>
+    <footer>
+        <p>end of page</p>
+    </footer>
+
+    <script> window.globalId = 3</script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

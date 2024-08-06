@@ -1,0 +1,137 @@
+body {
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Wolfgang";
+    src:
+        url("Wolfgang.ttf");
+}
+
+main {
+    width: 100%;
+    display: block;
+    justify-content: stretch;
+    align-items: center;
+    align-content: center;
+}
+
+#nav {
+    display: flexbox;
+    position: fixed;
+    z-index: 1000;
+}
+
+div.logo {
+    height: 100px;
+    width: 110px;
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+/* .logo:hover {
+    background-color: rgb(213, 160, 33);
+} */
+
+div.logo a {
+    text-decoration: none;
+    font-family: "Wolfgang";
+    color: white;
+    font-weight: lighter;
+    font-size: 100px;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+}
+
+nav.nav-Bar {
+    background-color: black;
+    width: calc(100vw - 110px);
+    padding: 0px;
+    margin: 0px;
+
+}
+
+ul {
+    height: 100px;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+li.logo {
+    padding: 0px;
+    float: left;
+    display: block;
+}
+
+li {
+    margin: 0px;
+    padding: 0px;
+    float: right;
+    text-decoration: none;
+}
+
+.nav-button {
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+li a {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-button:hover {
+    background-color: rgb(213, 160, 33);
+}
+
+#content {
+    text-align: center;
+    justify-content: center;
+    padding-top: 50px;
+    top: 100px;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    padding-bottom: 100px;
+    z-index: 100;
+    background-color: rgb(107, 101, 75);
+    height: auto;
+    width: 100%;
+    background-image: url('grunge-overlay.png');
+    background-size: cover;
+
+}
+
+.titles {
+    color: white;
+    font-size: 50px;
+    z-index: 500;
+    position: relative;
+    margin: 0px;
+
+}
+
+#product-display {
+    height: 65%;
+    width: 80%;
+    display: grid;
+}

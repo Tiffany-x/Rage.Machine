@@ -1,0 +1,522 @@
+body {
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Wolfgang";
+    src:
+        url("Wolfgang.ttf");
+}
+
+main {
+    width: 100%;
+    display: block;
+    justify-content: stretch;
+    align-items: center;
+    align-content: center;
+}
+
+#nav {
+    display: flexbox;
+    position: fixed;
+    z-index: 1000;
+    padding: 0px;
+}
+
+div.logo {
+    height: 100px;
+    width: 110px;
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+/* .logo:hover {
+    background-color: rgb(213, 160, 33);
+} */
+
+div.logo a {
+    text-decoration: none;
+    font-family: "Wolfgang";
+    color: white;
+    font-weight: lighter;
+    font-size: 100px;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+}
+
+nav.nav-Bar {
+    background-color: black;
+    width: calc(100vw - 110px);
+    padding: 0px;
+    margin: 0px;
+
+}
+
+ul {
+    height: 100px;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+li.logo {
+    padding: 0px;
+    float: left;
+    display: block;
+}
+
+li {
+    margin: 0px;
+    padding: 0px;
+    float: right;
+    text-decoration: none;
+}
+
+.nav-button {
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+li a {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-button:hover {
+    background-color: rgb(213, 160, 33);
+}
+
+.vid-container {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.vid-container video {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#background {
+    height: 100vh;
+    min-width: 50vw;
+    z-index: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+
+    height: calc(100vh - 100px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+
+
+div.hero {
+    width: calc(100% - 40px);
+    height: calc(100% - 300px);
+    top: 150px;
+    text-align: center;
+    vertical-align: center;
+    position: absolute;
+    z-index: 600;
+    padding: 20px;
+    justify-content: center;
+}
+
+div.hero h3 {
+    font-family: "Wolfgang";
+    color: white;
+    font-size: 200px;
+    font-weight: lighter;
+    z-index: 600;
+    padding: 0px;
+    margin: 0px;
+}
+
+p.hero-text {
+    color: white;
+    font-size: 50px;
+    z-index: 700;
+    position: relative;
+}
+
+
+
+.g-overlay {
+    background-image: url('grunge-overlay.png');
+    background-size: contain;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    margin-bottom: 100px;
+}
+
+#svg-background {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+svg {
+    position: relative;
+    align-self: center;
+    top: 80vh;
+    left: auto;
+    right: auto;
+    color: rgb(107, 101, 75);
+    z-index: 00;
+    align-content: center;
+    box-shadow: inset;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#content {
+    text-align: center;
+    justify-content: center;
+    padding-top: 50px;
+    height: auto;
+    margin-bottom: 100px;
+}
+
+iframe {
+    top: -50px;
+    position: relative;
+    z-index: 500;
+    margin: 50px;
+}
+
+.titles {
+    color: white;
+    font-size: 50px;
+    z-index: 500;
+    position: relative;
+    margin: 0px;
+
+}
+
+#listening {
+    z-index: 500;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.icon-button {
+    display: block;
+}
+
+.icon-button img {
+    height: 80px;
+    width: 80px;
+    color: black;
+}
+
+.soc-med {
+    display: block;
+}
+
+.soc-med img {
+    height: 80px;
+    width: 80px;
+    color: black;
+}
+
+#live-performances {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#current-poster {
+    position: relative;
+    width: 430px;
+    height: 594px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(213, 160, 33);
+    background-color: black;
+    justify-self: center;
+}
+
+#current-poster img {
+    width: 430px;
+    height: 594px;
+}
+
+#buy-tickets {
+    position: relative;
+    height: 50px;
+    width: 200px;
+    justify-self: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color: rgb(213, 160, 33);
+    font-weight: bold;
+    border-width: 2px;
+    border-color: black;
+}
+
+#poster-scroll {
+    z-index: 1000;
+}
+
+#poster-scroll div {
+    display: inline-block;
+    position: relative;
+    width: 105px;
+    height: 148.5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(213, 160, 33);
+    background-color: black;
+    justify-self: center;
+    margin: 10px;
+}
+
+#poster-scroll div img {
+    width: 105px;
+    height: 148.5px;
+}
+
+#poster-scroll div:hover {
+    transform: scale(1.1);
+}
+
+
+
+.merch-option {
+    border-radius: 8px;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+    margin: 5px;
+}
+
+.merch-option:hover {
+    background-color: rgb(213, 160, 33);
+}
+
+
+.merch-option a {
+    text-decoration: none;
+}
+
+#merch li {
+    color: white;
+    font-size: 30px;
+    z-index: 500;
+    position: relative;
+    border-radius: 20px;
+    display: block;
+    border-radius: 20px;
+    clip: auto;
+}
+
+#merch {
+    justify-content: center;
+    height: 50px;
+}
+
+#flex-merch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1000;
+    width: 80%;
+    align-self: center;
+    position: relative;
+    justify-items: center;
+    justify-self: center;
+}
+
+#albums {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1000;
+    width: 100%;
+    align-self: center;
+    position: relative;
+    justify-items: center;
+    justify-self: center;
+}
+
+#albums iframe {
+    padding: 0px;
+    margin: 20px;
+}
+
+.merch-item {
+    justify-content: center;
+    z-index: 1000;
+    margin: 20px;
+    display: flex;
+    height: 15vw;
+    min-height: 250px;
+    width: 15vw;
+    min-width: 250px;
+    background-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(213, 160, 33);
+    transition: all 0.3s ease;
+    clip: auto;
+    overflow: hidden;
+}
+
+
+div.merch-item:hover {
+    transform: scale(1.1);
+    /* background-color: rgba(107, 101, 75, 0.8); */
+}
+
+.banner {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 16.5vw;
+    min-width: 250px;
+    height: 8.25vw;
+    min-height: 125px;
+    transform: translate(-50%, 11%);
+    background-color: rgba(107, 101, 75, 0.8);
+    color: white;
+    display: none;
+    z-index: 1100;
+    position: absolute;
+    padding: 10px;
+}
+
+.merch-item:hover .banner {
+    display: block;
+}
+
+
+
+
+#newsletter-form {
+    z-index: 500;
+    position: relative;
+    margin: 0px;
+    background-color: black;
+    padding: 50px;
+    margin: 100px;
+    margin-top: 50px;
+}
+
+.normal-text {
+    color: white;
+    font-size: 20px;
+    z-index: 1000;
+    position: relative;
+    margin: 0px;
+}
+
+form input {
+    width: 70%;
+    height: 20px;
+}
+
+form input[type="submit"] {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(213, 160, 33);
+    font-weight: bold;
+}
+
+form label {
+    color: white;
+    font-size: 25px;
+    z-index: 1000;
+    position: relative;
+    margin: 0px;
+}
+
+
+#message {
+    color: white;
+}
+
+footer {
+    height: 300px;
+    width: 100%;
+    color: black;
+    position: fixed;
+    z-index: 1000;
+    visibility: visible;
+}
+
+main {
+    display: contents;
+}
+
+.to-cart {
+    display: grid;
+    z-index: 1000;
+}
+
+.to-cart p {
+    height: 20px;
+    width: 100px;
+    /* border-color: rgb(212, 158, 33);
+    border-width: 2px;
+    border-style: solid; */
+    background-color: rgb(212, 158, 33);
+    color: black;
+    border-radius: 10px;
+    justify-self: center;
+}
+
+.banner p {
+    margin: 5px;
+}
+
+.banner div {
+    margin: 10px;
+}
+
+#albums {
+    display: flex;
+}
+.social-media {
+    display: inline-block;
+    z-index: 1500;
+}
